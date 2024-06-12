@@ -16,7 +16,7 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Welcome! hello world</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
@@ -28,6 +28,7 @@ export default function HomeScreen() {
             {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
           </ThemedText>{' '}
           to open developer tools.
+          
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
