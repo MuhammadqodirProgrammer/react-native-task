@@ -13,6 +13,7 @@ import { Platform } from 'react-native';
 import { Colors } from '@/constants/Colors';
 import { CommonActions } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
+import CopySvg from '@/components/svg/Copy';
 // import * as Clipboard from 'expo-clipboard';
 
 export default function UploadScreen() {
@@ -31,8 +32,8 @@ export default function UploadScreen() {
 			style={styles.gradient}
 		>
 			<View style={styles.header}>
-				<Text style={styles.title}>{`<`}</Text>
-
+<CopySvg   width={60} height={60}  />
+				<Text style={styles.title}>{`<>`}</Text>
 				<Text style={styles.title}>RizzGPT</Text>
 				<Text style={styles.title}>+</Text>
 			</View>
