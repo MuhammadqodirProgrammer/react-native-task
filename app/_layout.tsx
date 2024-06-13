@@ -164,12 +164,14 @@ function RootLayoutNav() {
 			<Stack
 				screenOptions={{
 					statusBarHidden: true,
-          headerBackVisible: true,
+					headerBackVisible: true,
 				}}
 			>
-				<Stack.Screen   name='(tabs)/index' options={{ headerShown: false }} />
-				<Stack.Screen   name='(tabs)/paywall' options={{ headerShown: false }} />
-				<Stack.Screen   name='(tabs)/upload' options={{ headerShown: false }} />
+				<Stack.Screen name='(tabs)/index' options={{ headerShown: false }} />
+				<Stack.Screen name='(tabs)/paywall' options={{ headerShown: false }} />
+				<Stack.Screen name='(tabs)/home' options={{ headerShown: false }} />
+				<Stack.Screen name='(tabs)/upload' options={{ headerShown: false }} />
+				<Stack.Screen name='(tabs)/home2' options={{ headerShown: false }} />
 				<Stack.Screen name='+not-found' />
 			</Stack>
 		</ThemeProvider>

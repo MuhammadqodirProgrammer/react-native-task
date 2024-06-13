@@ -6,16 +6,22 @@ import Svg, {
 	Defs,
 	LinearGradient as SvgLinearGradient,
 	Stop,
+	SvgXml,
 } from 'react-native-svg';
-import { useNavigation ,CommonActions } from '@react-navigation/native';
+import { matchXml } from '@/assets/icons/xml';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 
-
+import Copy from "@/assets/icons/copy.svg"
 export default function PaywallScreen() {
 	const navigation = useNavigation();
 
- 
 	return (
 		<View style={styles.container}>
+
+			{/* <Copy width={100} height={100}  /> */}
+
+			<SvgXml xml={matchXml} width='100' height='100' />
+
 			<Text style={styles.text}>Unlimited Rizz</Text>
 			<Text style={styles.text}>Coach Recommended</Text>
 			<Text style={styles.text}>Proven to Get Dates</Text>
@@ -57,13 +63,13 @@ export default function PaywallScreen() {
 					style={styles.button}
 					onPress={() =>
 						navigation.dispatch(
-              CommonActions.navigate({
-                name: '(tabs)/upload',
-                params: {
-                  user: 'jane',
-                },
-              })
-            )
+							CommonActions.navigate({
+								name: '(tabs)/home',
+								params: {
+									user: 'jane',
+								},
+							})
+						)
 					}
 				>
 					<Text style={styles.buttonText}>Unlock Free Trial</Text>
