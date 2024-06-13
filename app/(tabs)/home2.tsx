@@ -23,8 +23,10 @@ export default function HomeScreen() {
 
 			<FlatList
 				data={ScreenshotData}
-				renderItem={({ item }) => <ScreenshotCard text={item.text} />}
-				keyExtractor={(item) => item.id}
+				renderItem={({ item }) => (
+					<ScreenshotCard text={item.text} id={item.id} />
+				)}
+				keyExtractor={(item) => `${item.id}`}
 				numColumns={3}
 				contentContainerStyle={styles.listContainer}
 			/>

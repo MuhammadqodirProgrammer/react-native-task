@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+	View,
+	Text,
+	StyleSheet,
+	TouchableOpacity,
+	ScrollView,
+} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Svg, {
 	Text as SvgText,
@@ -8,74 +14,74 @@ import Svg, {
 	Stop,
 	SvgXml,
 } from 'react-native-svg';
-import { matchXml } from '@/assets/icons/xml';
 import { useNavigation, CommonActions } from '@react-navigation/native';
 
 import MatchSvg from '@/components/svg/Match';
-import CopySvg from '@/components/svg/Copy';
+import ParallaxScrollView from '@/components/ParallaxScrollView';
 export default function PaywallScreen() {
 	const navigation = useNavigation();
 
 	return (
-		<View style={styles.container}>
-
-			<MatchSvg style={{marginTop:20}} />
-
-			<Text style={styles.text}>Unlimited Rizz</Text>
-			<Text style={styles.text}>Coach Recommended</Text>
-			<Text style={styles.text}>Proven to Get Dates</Text>
-			<Text style={styles.text}>x10 More Responses</Text>
-			<Text style={styles.text}>x8 More Dates</Text>
-
-			<View style={styles.gameContainer}>
-				<LinearGradient
-					colors={['#00A676', '#46B1C9']}
-					style={styles.header}
-					start={{ x: 0, y: 0 }}
-					end={{ x: 1, y: 0 }}
-				>
-					<Text style={styles.headerText}>Rizz God</Text>
-				</LinearGradient>
-
-				<View style={styles.titleContainer}>
-					<Svg height='60' width='300'>
-						<Defs>
-							<SvgLinearGradient id='grad' x1='0' y1='0' x2='1' y2='0'>
-								<Stop offset='0' stopColor='#FFFFFF' stopOpacity='1' />
-								<Stop offset='1' stopColor='#46B1C9' stopOpacity='1' />
-							</SvgLinearGradient>
-						</Defs>
-						<SvgText
-							fill='url(#grad)'
-							fontSize='24'
-							fontWeight='bold'
-							x='50%'
-							y='50%'
-							textAnchor='middle'
-						>
-							Elevate Your Game
-						</SvgText>
-					</Svg>
+		
+			<View style={styles.container}>
+				<MatchSvg style={{ marginTop: 20 }} />
+				<View>
+					<Text style={styles.text}> 🔥 Unlimited Rizz</Text>
+					<Text style={styles.text}> 🧡 Coach Recommended</Text>
+					<Text style={styles.text}> 🧐 Proven to Get Dates</Text>
+					<Text style={styles.text}> 🚀 x10 More Responses</Text>
+					<Text style={styles.text}> 🎉 x8 More Dates</Text>
 				</View>
 
-				<TouchableOpacity
-					style={styles.button}
-					onPress={() =>
-						navigation.dispatch(
-							CommonActions.navigate({
-								name: '(tabs)/home',
-								params: {
-									user: 'jane',
-								},
-							})
-						)
-					}
-				>
-					<Text style={styles.buttonText}>Unlock Free Trial</Text>
-				</TouchableOpacity>
-				<Text style={styles.footerText}>risk-free trial then $8.67/week</Text>
+				<View style={styles.gameContainer}>
+					<LinearGradient
+						colors={['#00A676', '#46B1C9']}
+						style={styles.header}
+						start={{ x: 0, y: 0 }}
+						end={{ x: 1, y: 0 }}
+					>
+						<Text style={styles.headerText}>Rizz God</Text>
+					</LinearGradient>
+
+					<View style={styles.titleContainer}>
+						<Svg height='60' width='300'>
+							<Defs>
+								<SvgLinearGradient id='grad' x1='0' y1='0' x2='1' y2='0'>
+									<Stop offset='0' stopColor='#FFFFFF' stopOpacity='1' />
+									<Stop offset='1' stopColor='#46B1C9' stopOpacity='1' />
+								</SvgLinearGradient>
+							</Defs>
+							<SvgText
+								fill='url(#grad)'
+								fontSize='24'
+								fontWeight='bold'
+								x='50%'
+								y='50%'
+								textAnchor='middle'
+							>
+								Elevate Your Game
+							</SvgText>
+						</Svg>
+					</View>
+
+					<TouchableOpacity
+						style={styles.button}
+						onPress={() =>
+							navigation.dispatch(
+								CommonActions.navigate({
+									name: '(tabs)/home',
+									params: {
+										user: 'jane',
+									},
+								})
+							)
+						}
+					>
+						<Text style={styles.buttonText}>Unlock Free Trial</Text>
+					</TouchableOpacity>
+					<Text style={styles.footerText}>risk-free trial then $8.67/week</Text>
+				</View>
 			</View>
-		</View>
 	);
 }
 
@@ -91,6 +97,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'regular',
 		marginTop: 24,
 		color: '#fff',
+		textAlign: 'left',
 	},
 	gameContainer: {
 		justifyContent: 'center',
