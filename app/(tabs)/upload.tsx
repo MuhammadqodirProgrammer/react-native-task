@@ -35,7 +35,7 @@ export default function UploadScreen() {
 		>
 			<View style={styles.header}>
 				<TouchableOpacity onPress={() => navigation.goBack()}>
-					<GoBackSvg />
+					<GoBackSvg  fill={'#fff'} />
 				</TouchableOpacity>
 				<Text style={styles.title}>RizzGPT</Text>
 				<TouchableOpacity onPress={() => Alert.alert('Salom ishlar qalay ?')}>
@@ -191,6 +191,7 @@ const styles = StyleSheet.create({
 		backgroundColor: '#00c853',
 		borderRadius: 16,
 		alignItems: 'center',
+		marginTop:12,
 		// Shadow for iOS
 		shadowColor: '#000',
 		shadowOffset: { width: 0, height: 2 },

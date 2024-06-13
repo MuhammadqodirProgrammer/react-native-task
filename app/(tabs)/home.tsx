@@ -28,10 +28,7 @@ export default function HomeScreen() {
 				width={480}
 			/>
 			<TouchableOpacity
-				style={[
-					styles.button1,
-					Platform.OS === 'android' ? styles.androidShadow : styles.iosShadow,
-				]}
+				style={styles.button}
 				onPress={() =>
 					navigation.dispatch(
 						CommonActions.navigate({
@@ -53,7 +50,7 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 		width: '100%',
 		padding: 20,
-		paddingTop: 80,
+		paddingTop: 70,
 		borderEndStartRadius: 0,
 		borderBottomLeftRadius: 0,
 		borderBottomRightRadius: 0,
@@ -76,16 +73,22 @@ const styles = StyleSheet.create({
 		marginBottom: 50,
 	},
 
-	button1: {
+	button: {
 		backgroundColor: '#00A676', // Green button color
 		paddingVertical: 15,
-		paddingHorizontal: 80,
 		borderRadius: 50,
-		marginBottom: 20,
-		marginTop: 50,
-		shadowColor: '#00A676',
-		// shadowOffset: { width: 3, height: 3 },
-		elevation: 50,
+		height: 'auto',
+		marginTop: 36,
+		shadowColor: '#fff',
+		shadowOffset: {
+			width: 0,
+			height: 6,
+		},
+		shadowOpacity: 0.39,
+		shadowRadius: 8.3,
+
+		elevation: 3,
+		width: '100%',
 	},
 
 	androidShadow: {

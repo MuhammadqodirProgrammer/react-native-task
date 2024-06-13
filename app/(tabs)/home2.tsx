@@ -83,15 +83,7 @@ const styles = StyleSheet.create({
 	button: {
 		backgroundColor: '#00A676', // Green button color
 		paddingVertical: 15,
-		// paddingHorizontal: 80,
 		borderRadius: 50,
-		// marginBottom: 20,
-		// marginTop: 50,
-		// shadowColor: '#fff',
-		// shadowOffset: { width: 0, height: 4 },
-		// shadowOpacity: 0.3,
-		// shadowRadius: 10,
-		// elevation: 5,
 		height: 'auto',
 		shadowColor: '#fff',
 		shadowOffset: {

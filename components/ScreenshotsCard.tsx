@@ -27,7 +27,7 @@ export const ScreenshotData: DataItem[] = [
 	{ id: 5, text: "User's screenshot" },
 	{ id: 6, text: "User's screenshot" },
 	{ id: 7, text: "User's screenshot" },
-	{ id: 8, text: "User's screenshot" },
+	// { id: 8, text: "User's screenshot" },
 ];
 
 export const ScreenshotCard: React.FC<DataItem> = ({ text, id }) => (
