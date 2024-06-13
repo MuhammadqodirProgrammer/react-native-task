@@ -14,6 +14,8 @@ import { Colors } from '@/constants/Colors';
 import { CommonActions } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import CopySvg from '@/components/svg/Copy';
+import GoBackSvg from '@/components/svg/GoBack';
+import PlusSvg from '@/components/svg/Plus';
 // import * as Clipboard from 'expo-clipboard';
 
 export default function UploadScreen() {
@@ -32,10 +34,13 @@ export default function UploadScreen() {
 			style={styles.gradient}
 		>
 			<View style={styles.header}>
-<CopySvg   width={60} height={60}  />
-				<Text style={styles.title}>{`<>`}</Text>
+				<TouchableOpacity onPress={() => navigation.goBack()}>
+					<GoBackSvg />
+				</TouchableOpacity>
 				<Text style={styles.title}>RizzGPT</Text>
-				<Text style={styles.title}>+</Text>
+				<TouchableOpacity onPress={() => Alert.alert('Salom ishlar qalay ?')}>
+					<PlusSvg />
+				</TouchableOpacity>
 			</View>
 			<View style={styles.upload_box}>
 				<Text style={styles.sub_title}>User’s screenshot</Text>
@@ -45,7 +50,7 @@ export default function UploadScreen() {
 			<View style={styles.copyBox}>
 				<Text style={styles.copyText}>{text}</Text>
 				<TouchableOpacity onPress={copyToClipboard} style={styles.copyButton}>
-					<Text style={styles.copyButtonText}>copy</Text>
+					<CopySvg />
 				</TouchableOpacity>
 			</View>
 			<TouchableOpacity
@@ -80,7 +85,6 @@ const styles = StyleSheet.create({
 		color: '#fff',
 		fontSize: 36,
 		fontWeight: 'bold',
-		marginBottom: 20,
 		textTransform: 'uppercase',
 		fontFamily: 'Syncopate-Bold',
 	},
@@ -88,6 +92,8 @@ const styles = StyleSheet.create({
 		width: '100%',
 		display: 'flex',
 		alignItems: 'center',
+		marginBottom: 20,
+
 		justifyContent: 'space-between',
 		flexDirection: 'row',
 	},
@@ -166,8 +172,7 @@ const styles = StyleSheet.create({
 	},
 	copyButton: {
 		marginLeft: 10,
-		padding: 10,
-		backgroundColor: '#000',
+		backgroundColor: 'transparent',
 		borderRadius: 5,
 		// Shadow for iOS
 		shadowColor: '#000',

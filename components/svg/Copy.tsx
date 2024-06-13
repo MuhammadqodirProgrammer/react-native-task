@@ -3,8 +3,8 @@ import Svg, { Path } from "react-native-svg"
 const CopySvg = () => (
   <Svg
   key={1}
-    width={60}
-    height={60}
+    width={40}
+    height={40}
     fill="none"
     viewBox="0 0 24 24"
   >

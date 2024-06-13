@@ -11,16 +11,15 @@ import Svg, {
 import { matchXml } from '@/assets/icons/xml';
 import { useNavigation, CommonActions } from '@react-navigation/native';
 
-import Copy from "@/assets/icons/copy.svg"
+import MatchSvg from '@/components/svg/Match';
+import CopySvg from '@/components/svg/Copy';
 export default function PaywallScreen() {
 	const navigation = useNavigation();
 
 	return (
 		<View style={styles.container}>
 
-			{/* <Copy width={100} height={100}  /> */}
-
-			<SvgXml xml={matchXml} width='100' height='100' />
+			<MatchSvg style={{marginTop:20}} />
 
 			<Text style={styles.text}>Unlimited Rizz</Text>
 			<Text style={styles.text}>Coach Recommended</Text>
@@ -90,7 +89,7 @@ const styles = StyleSheet.create({
 	text: {
 		fontSize: 24,
 		fontWeight: 'regular',
-		marginTop: 44,
+		marginTop: 24,
 		color: '#fff',
 	},
 	gameContainer: {
